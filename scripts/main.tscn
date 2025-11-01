@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://du5pmnw8ixeyc"]
+
+[ext_resource type="Script" uid="uid://db1iw831wp668" path="res://scenes/main.gd" id="1_irwmq"]
+[ext_resource type="PackedScene" uid="uid://md38dce0nlq1" path="res://scenes/elevator.tscn" id="2_hakmx"]
+[ext_resource type="PackedScene" uid="uid://bl7ssm21l4h6d" path="res://scenes/floor.tscn" id="3_0nr8p"]
+
+[node name="Home" type="Node2D"]
+script = ExtResource("1_irwmq")
+
+[node name="Elevator" parent="." instance=ExtResource("2_hakmx")]
+position = Vector2(378.00003, 464)
+scale = Vector2(0.53182006, 0.53182006)
+
+[node name="Floor1" parent="." instance=ExtResource("3_0nr8p")]
+position = Vector2(550, 614)
+
+[node name="Floor2" parent="." instance=ExtResource("3_0nr8p")]
+position = Vector2(548, 412)
+
+[node name="Floor3" parent="." instance=ExtResource("3_0nr8p")]
+position = Vector2(547, 187)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1151.0
+offset_bottom = 23.0

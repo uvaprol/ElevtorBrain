@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://md38dce0nlq1"]
+
+[ext_resource type="Script" uid="uid://7bhdc5fhc1h2" path="res://scripts/elevator.gd" id="1_8o2wm"]
+
+[node name="Elevator" type="Node2D"]
+script = ExtResource("1_8o2wm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 282.0
+offset_bottom = 282.0
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+offset_left = 128.0
+offset_top = 12.0
+offset_right = 159.0
+offset_bottom = 43.0
+color = Color(0.91227055, 4.7168137e-06, 6.738305e-07, 1)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 229.0
+offset_top = 54.0
+offset_right = 264.0
+offset_bottom = 89.0
+text = "3"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 229.0
+offset_top = 129.0
+offset_right = 264.0
+offset_bottom = 164.0
+text = "2"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 229.0
+offset_top = 202.0
+offset_right = 264.0
+offset_bottom = 237.0
+text = "1"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
