@@ -12,13 +12,13 @@ position = Vector2(443.1, 154)
 scale = Vector2(0.99803394, 0.99803394)
 
 [node name="Floor1" parent="." instance=ExtResource("3_0nr8p")]
-position = Vector2(560, 549)
+position = Vector2(555, 549)
 
 [node name="Floor2" parent="." instance=ExtResource("3_0nr8p")]
-position = Vector2(560, 326)
+position = Vector2(555, 326)
 
 [node name="Floor3" parent="." instance=ExtResource("3_0nr8p")]
-position = Vector2(560, 103)
+position = Vector2(555, 103)
 
 [node name="Label" type="Label" parent="."]
 offset_right = 1151.0

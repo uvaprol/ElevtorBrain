@@ -3,31 +3,31 @@
 [ext_resource type="Script" uid="uid://cytiycwexa2ic" path="res://scripts/floor.gd" id="1_ukw5w"]
 [ext_resource type="Texture2D" uid="uid://bqyj6b6omhum2" path="res://sprites/floor_animation.svg" id="2_kuqtn"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuqtn"]
+atlas = ExtResource("2_kuqtn")
+region = Rect2(0, 0, 192, 144)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_whr1e"]
 atlas = ExtResource("2_kuqtn")
-region = Rect2(0, 0, 197, 144)
+region = Rect2(192, 0, 192, 144)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3lc0u"]
 atlas = ExtResource("2_kuqtn")
-region = Rect2(197, 0, 197, 144)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7525o"]
-atlas = ExtResource("2_kuqtn")
-region = Rect2(394, 0, 197, 144)
+region = Rect2(384, 0, 192, 144)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_poy5y"]
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_kuqtn")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_whr1e")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3lc0u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7525o")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 5.0
 }]

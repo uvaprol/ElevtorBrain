@@ -23,14 +23,16 @@ func _process(_delta: float) -> void:
 		else:
 			move_direction = 'stop'
 			open_on_floor = true
-			$"..".floor_tasks.erase(task)
-			$"..".elevator_tasks.erase(task)
 			$AnimatedSprite2D.play('default')
+			floors[task - 1].get_children()[0].play('default')
 			open_status = true
 			#$AnimatedSprite2D.play_backwards('default')
 
 func _on_timer_timeout() -> void:
 	$AnimatedSprite2D.play_backwards('default')
+	floors[task - 1].get_children()[0].play_backwards('default')
+	$"..".floor_tasks.erase(task)
+	$"..".elevator_tasks.erase(task)
 	open_status = false
 	move_direction = null
 	task = null
