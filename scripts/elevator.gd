@@ -1,7 +1,7 @@
 extends Node2D
 
-#614 412 187
-const FLOOR = [464, 258, 33]
+#
+const FLOOR = [633, 410, 187]
 var task = null
 var move_direction = null
 	

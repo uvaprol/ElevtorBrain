@@ -40,7 +40,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_poy5y")
 
 [node name="Button" type="Button" parent="."]
-visible = false
+modulate = Color(1, 1, 1, 0)
 offset_left = -27.0
 offset_top = -4.0
 offset_right = 1.0
