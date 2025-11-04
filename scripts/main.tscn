@@ -8,14 +8,14 @@
 script = ExtResource("1_irwmq")
 
 [node name="Elevator" parent="." instance=ExtResource("2_hakmx")]
-position = Vector2(378.00003, 464)
-scale = Vector2(0.53182006, 0.53182006)
+position = Vector2(125.00003, 328)
+scale = Vector2(0.99803394, 0.99803394)
 
 [node name="Floor1" parent="." instance=ExtResource("3_0nr8p")]
-position = Vector2(550, 614)
+position = Vector2(547, 633)
 
 [node name="Floor2" parent="." instance=ExtResource("3_0nr8p")]
-position = Vector2(548, 412)
+position = Vector2(547, 410)
 
 [node name="Floor3" parent="." instance=ExtResource("3_0nr8p")]
 position = Vector2(547, 187)
