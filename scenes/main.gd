@@ -11,7 +11,7 @@ var elevator_tasks = []
 	#print(floors)
 
 func _process(_delta: float) -> void:
-	if len(floor_tasks) != 0:
+	if len(floor_tasks) != 0 and not $Elevator.task:
 		floor_tasks.sort()
 		$Elevator.task = floor_tasks[-1]
 	$Label.text = "{tasks}".format({'tasks': floor_tasks})
