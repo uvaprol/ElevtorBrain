@@ -8,7 +8,7 @@
 script = ExtResource("1_irwmq")
 
 [node name="Elevator" parent="." instance=ExtResource("2_hakmx")]
-position = Vector2(448, 103.00001)
+position = Vector2(448.1, 154)
 scale = Vector2(0.99803394, 0.99803394)
 
 [node name="Floor1" parent="." instance=ExtResource("3_0nr8p")]

@@ -1,17 +1,23 @@
 extends Node2D
 
 #
-const FLOOR = [633, 410, 187]
+var floor_y = []
 var task = null
 var move_direction = null
-	
+
+func _ready() -> void:
+	for child in $"..".get_children():
+		if child.name.find('Floor') != -1:
+			floor_y.append(child.position.y)
+	#floor_y.sort()
+	print(floor_y)
 
 func _process(_delta: float) -> void:
 	if task and $Timer.is_stopped():
-		if position.y < FLOOR[task - 1]:
+		if position.y < floor_y[task - 1]:
 			position.y += 1
 			move_direction = 'down'
-		elif position.y > FLOOR[task - 1]:
+		elif position.y > floor_y[task - 1]:
 			position.y -= 1
 			move_direction = 'up'
 		else:
