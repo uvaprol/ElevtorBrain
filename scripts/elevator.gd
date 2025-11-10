@@ -23,13 +23,13 @@ func _process(_delta: float) -> void:
 		else:
 			move_direction = 'stop'
 			open_on_floor = true
-			$AnimatedSprite2D.play('default')
+			#$AnimatedSprite2D.play('default')
 			floors[task - 1].get_children()[0].play('default')
 			open_status = true
 			#$AnimatedSprite2D.play_backwards('default')
 
 func _on_timer_timeout() -> void:
-	$AnimatedSprite2D.play_backwards('default')
+	#$AnimatedSprite2D.play_backwards('default')
 	floors[task - 1].get_children()[0].play_backwards('default')
 	$"..".floor_tasks.erase(task)
 	$"..".elevator_tasks.erase(task)
@@ -37,7 +37,7 @@ func _on_timer_timeout() -> void:
 	move_direction = null
 	task = null
 
-func _on_animated_sprite_2d_animation_finished() -> void:
+func move_door() -> void:
 	if open_status:
 		$Timer.start()
 	else:
