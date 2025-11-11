@@ -1,44 +1,44 @@
 extends Node2D
 
-var floors = []
 var task = null
-var move_direction = null
-var open_on_floor = false
-var open_status = false
+var can_move = true
+var FLOORS = []
+#var move_direction = null
+#var open_on_floor = false
+#var open_status = false
 
 func _ready() -> void:
-	for child in $"..".get_children():
-		if child.name.find('Floor') != -1:
-			floors.append(child)
-	print(floors)
+	for f in $"..".get_children():
+		if f.name.find('Floor') != -1:
+			FLOORS.append(f)
+	print(FLOORS[3-1])
 
 func _process(_delta: float) -> void:
-	if task and not open_on_floor:
-		if position.y < floors[task - 1].position.y:
+	if task and can_move:
+		if position.y < FLOORS[task - 1].position.y:
 			position.y += 1
-			move_direction = 'down'
-		elif position.y > floors[task - 1].position.y:
+			#move_direction = 'down'
+		elif position.y > FLOORS[task - 1].position.y:
 			position.y -= 1
-			move_direction = 'up'
+			#move_direction = 'up'
 		else:
-			move_direction = 'stop'
-			open_on_floor = true
+			#move_direction = 'stop'
+			#open_on_floor = true
 			#$AnimatedSprite2D.play('default')
-			floors[task - 1].get_children()[0].play('default')
-			open_status = true
+			can_move = false
+			FLOORS[task - 1].get_children()[0].play('default')
+			#open_status = true
 			#$AnimatedSprite2D.play_backwards('default')
 
 func _on_timer_timeout() -> void:
 	#$AnimatedSprite2D.play_backwards('default')
-	floors[task - 1].get_children()[0].play_backwards('default')
-	$"..".floor_tasks.erase(task)
-	$"..".elevator_tasks.erase(task)
-	open_status = false
-	move_direction = null
+	FLOORS[task - 1].get_children()[0].play_backwards('default')
+	#open_status = false
+	#move_direction = null
 	task = null
 
 func move_door() -> void:
-	if open_status:
+	if not can_move:
 		$Timer.start()
 	else:
-		open_on_floor = false
+		can_move = true

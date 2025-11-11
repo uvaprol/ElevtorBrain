@@ -37,17 +37,15 @@ animations = [{
 script = ExtResource("1_8o2wm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(16, 0)
 scale = Vector2(2, 2)
 texture = ExtResource("2_jmdsd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
 position = Vector2(17, 0)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_xslfi")
-frame = 2
-frame_progress = 1.0
 
 [node name="Button" type="Button" parent="."]
 offset_left = 19.0
