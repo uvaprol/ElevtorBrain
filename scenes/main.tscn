@@ -11,6 +11,9 @@ script = ExtResource("1_sugp2")
 position = Vector2(443.1, 154)
 scale = Vector2(0.99803394, 0.99803394)
 
+[node name="Elevator2" parent="." instance=ExtResource("2_jyhfs")]
+position = Vector2(228, 150)
+
 [node name="Floor1" parent="." instance=ExtResource("3_tbgi4")]
 position = Vector2(555, 549)
 
@@ -23,7 +26,3 @@ position = Vector2(555, 103)
 [node name="Label" type="Label" parent="."]
 offset_right = 1151.0
 offset_bottom = 23.0
-
-[node name="Elevator2" parent="." instance=ExtResource("2_jyhfs")]
-position = Vector2(293.00006, 206.00003)
-scale = Vector2(0.99607176, 0.99607176)

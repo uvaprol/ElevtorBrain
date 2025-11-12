@@ -5,25 +5,14 @@ var ELEVATORS = []
 var FLOORS = []
 
 func  _ready() -> void:
-	
 	for e in get_children():
 		if 'Elevator' in e.name:
 			ELEVATORS.append(e)
-	print(ELEVATORS)
-#var floors = []
-#
-#func _ready() -> void:
-	for e in ELEVATORS:
-			print(e.task, not e.task)
-	#for child in get_children():
-		#if child.name.find('Floor') != -1:
-			#floors.append(child)
-	#print(floors)
 
 func _process(_delta: float) -> void:
 	if len(floor_tasks) != 0:
+#TODO решить проблему повторного вызова во время открытых дверей на этаже
 		for e in ELEVATORS:
-			print(e.task, not e.task)
 			if not e.task:
 				e.task = floor_tasks[-1]
 				floor_tasks.remove_at(-1)
